@@ -5,13 +5,13 @@
         %p.side-header__box__user-name 太郎
         %ul.side-header__box__menu
           %li.side-header__box__menu__create-group
-            %a{:href => "#"}
-              %i.fa.fa-edit
+            = link_to "#", class: "create-grouop" do
+              = icon('fas', 'edit')
           %li.side-header__box__menu__edit-user
-            %a{:href => "#"}
-              %i.fa.fa-cog
+            = link_to "#", class: "edit-user" do
+              = icon('fas', 'cog')
     .groups
-      %a{:href => "#"}
+      = link_to "#", class: "groups" do
         .group
           %p.group__group-name 1
           %p.group__last-remark おはよう
