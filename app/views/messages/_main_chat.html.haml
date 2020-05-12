@@ -1,12 +1,12 @@
 .chat-main
   .main-header
     .main-header__chat-group
-      %h2.main-header__chat-group__current-group{"#" => "#"}
+      %h2.main-header__chat-group__current-group
         1
       %ul.main-header__chat-group__member-list
         Member：
         %li.main-header__chat-group__member-list__member 太郎
-    %a{:href => "#"}
+    = link_to "#", class: "edit" do
       .main-header__edit-btn Edit
   .messages
     .message{"#" => "#"}
