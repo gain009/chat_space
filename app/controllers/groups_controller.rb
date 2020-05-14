@@ -24,12 +24,24 @@ class GroupsController < ApplicationController
   def update
     @group = Group.find(params[:id])
     if @group.update(group_params)
+<<<<<<< Updated upstream
       redirect_to root_path, notice: 'グループを更新しました'
+=======
+      redirect_to group_messages_path(@group), notice: 'グループを更新しました'
+>>>>>>> Stashed changes
     else
       render :edit
     end
   end
 
+<<<<<<< Updated upstream
+=======
+  def show
+    @group = Group.find(params[:id])
+    @users = group.users
+  end
+
+>>>>>>> Stashed changes
   private
   def group_params
     params.require(:group).permit(:name, user_ids: [])
